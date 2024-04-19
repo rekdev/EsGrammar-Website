@@ -2,10 +2,10 @@ import PropTypes from 'prop-types'
 
 function AnalysisTable({ words }) {
 	return (
-		<div className='bg-esgrammar-light-100 border-esgrammar-light-400 dark:bg-esgrammar-dark-300 dark:border-esgrammar-dark-400 h-96  overflow-auto rounded-lg border-2'>
-			<table className=' dark:text-esgrammar-light-100 text-esgrammar-dark-100 font-noto-sans border-esgrammar-light-400 w-full table-fixed border-collapse rounded-lg'>
-				<thead className=''>
-					<tr className='dark:bg-esgrammar-dark-400 bg-esgrammar-light-200 border-esgrammar-light-400 dark:border-esgrammar-dark-400 sticky top-0 h-12 rounded-t-md  border-b text-left *:pl-6 *:font-medium'>
+		<div className='h-96 overflow-auto rounded-lg border-2 border-esgrammar-light-400  bg-esgrammar-light-100 dark:border-esgrammar-dark-400 dark:bg-esgrammar-dark-300'>
+			<table className=' w-full table-fixed border-collapse rounded-lg border-esgrammar-light-400 font-noto-sans text-esgrammar-dark-100 dark:text-esgrammar-light-100'>
+				<thead>
+					<tr className='sticky top-0 h-12 rounded-t-md border-b border-esgrammar-light-400 bg-esgrammar-light-200 text-left  *:pl-6 *:font-medium dark:border-esgrammar-dark-400 dark:bg-esgrammar-dark-400'>
 						<th>Palabra</th>
 						<th>Silabas</th>
 						<th>Tipo</th>
@@ -14,10 +14,10 @@ function AnalysisTable({ words }) {
 					</tr>
 				</thead>
 				<tbody>
-					{words.map(word => (
+					{words.map((word, key) => (
 						<tr
-							key={Math.random().toString(36).substr(2, 9)}
-							className='border-esgrammar-light-400 dark:border-esgrammar-dark-400 h-12 border-b *:pl-6'
+							key={key}
+							className='h-12 border-b border-esgrammar-light-400 *:pl-6 dark:border-esgrammar-dark-400'
 						>
 							<td>{word.word}</td>
 							<td

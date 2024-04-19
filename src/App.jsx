@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 
 import AnalysisArea from '@/components/AnalysisArea'
 import AnalysisTable from '@/components/AnalysisTable'
@@ -10,14 +10,6 @@ function App() {
 	const [text, setText] = useState('')
 	const { wordsAnalysed, textAnalysed } = useTextAnalysed(text)
 
-	useEffect(() => {
-		console.log(wordsAnalysed)
-	}, [wordsAnalysed])
-
-	useEffect(() => {
-		console.log(textAnalysed)
-	}, [textAnalysed])
-
 	return (
 		<>
 			<Navbar />
@@ -28,8 +20,7 @@ function App() {
 							setText(e.target.value)
 						}}
 						value={textAnalysed}
-					>
-					</AnalysisArea>
+					></AnalysisArea>
 					<AnalysisTable words={wordsAnalysed} />
 				</div>
 			</main>

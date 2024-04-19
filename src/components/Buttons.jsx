@@ -4,7 +4,7 @@ function IconButton({ children, onClick }) {
 	return (
 		<button
 			onClick={onClick}
-			className='*:fill-esgrammar-dark-100 dark:*:fill-esgrammar-light-200 hover:bg-esgrammar-light-200 active:bg-esgrammar-light-300 dark:hover:bg-esgrammar-dark-400 dark:active:bg-esgrammar-dark-500 grid h-12 w-12 place-items-center rounded *:h-6 *:w-auto'
+			className='grid h-12 w-12 place-items-center rounded *:h-6 *:w-auto *:fill-esgrammar-dark-100 hover:bg-esgrammar-light-200 active:bg-esgrammar-light-300 dark:*:fill-esgrammar-light-200 dark:hover:bg-esgrammar-dark-400 dark:active:bg-esgrammar-dark-500'
 		>
 			{children}
 		</button>
@@ -20,7 +20,7 @@ function LinkIconButton({ children, href }) {
 	return (
 		<a
 			href={href}
-			className='*:fill-esgrammar-dark-100 dark:*:fill-esgrammar-light-200 hover:bg-esgrammar-light-200 active:bg-esgrammar-light-300 dark:hover:bg-esgrammar-dark-400 dark:active:bg-esgrammar-dark-500 grid h-12 w-12 place-items-center rounded *:h-6 *:w-auto'
+			className='grid h-12 w-12 place-items-center rounded *:h-6 *:w-auto *:fill-esgrammar-dark-100 hover:bg-esgrammar-light-200 active:bg-esgrammar-light-300 dark:*:fill-esgrammar-light-200 dark:hover:bg-esgrammar-dark-400 dark:active:bg-esgrammar-dark-500'
 		>
 			{children}
 		</a>
