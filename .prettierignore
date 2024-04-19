@@ -1,0 +1,5 @@
+dist/
+**/*.html
+pnpm-lock.yaml
+yarn.lock
+package-lock.json

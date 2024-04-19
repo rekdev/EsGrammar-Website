@@ -1,0 +1,38 @@
+{
+	"name": "react-tailwindcss",
+	"version": "0.0.1",
+	"type": "module",
+	"scripts": {
+		"dev": "vite",
+		"build": "vite build",
+		"format": "prettier --write .",
+		"lint": "eslint --fix . --ext .js,.jsx",
+		"test": "vitest"
+	},
+	"dependencies": {
+		"esgrammar": "^0.1.8",
+		"prop-types": "^15.8.1",
+		"react": "^18.2.0",
+		"react-dom": "^18.2.0",
+		"react-icons": "^5.1.0"
+	},
+	"devDependencies": {
+		"@trivago/prettier-plugin-sort-imports": "^4.3.0",
+		"@types/react": "^18.2.73",
+		"@types/react-dom": "^18.2.23",
+		"@vitejs/plugin-react-swc": "^3.6.0",
+		"autoprefixer": "^10.4.19",
+		"eslint": "^8.57.0",
+		"eslint-config-prettier": "^9.1.0",
+		"eslint-config-standard": "^17.1.0",
+		"eslint-plugin-import": "^2.29.1",
+		"eslint-plugin-n": "^16.6.2",
+		"eslint-plugin-promise": "^6.1.1",
+		"eslint-plugin-react": "^7.34.1",
+		"postcss": "^8.4.38",
+		"prettier": "^3.2.5",
+		"prettier-plugin-tailwindcss": "^0.5.13",
+		"tailwindcss": "^3.4.3",
+		"vite": "^5.2.7"
+	}
+}
