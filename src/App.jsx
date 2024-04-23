@@ -13,8 +13,8 @@ function App() {
 	return (
 		<>
 			<Navbar />
-			<main className='flex w-screen justify-center px-4 pb-6 pt-28'>
-				<div className='flex w-screen max-w-7xl flex-col gap-7'>
+			<main className='flex w-screen justify-center pb-6 pt-28'>
+				<div className='flex w-screen max-w-7xl flex-col gap-7 px-5 xl:px-0'>
 					<AnalysisArea
 						onChange={e => {
 							setText(e.target.value)
