@@ -1,6 +1,7 @@
-import { PiGithubLogo, PiSun } from 'react-icons/pi'
+import { PiGithubLogo } from 'react-icons/pi'
 
-import { IconButton, LinkIconButton } from '@/components/Buttons'
+import { LinkIconButton } from '@/components/Buttons'
+import ThemeSwitcher from '@/components/ThemeSwitcher'
 
 function Brand() {
 	return (
@@ -26,10 +27,8 @@ function Navbar() {
 		<header className='fixed left-0 top-0 z-50 flex h-20 w-screen justify-center border-b-2 border-esgrammar-light-300 bg-esgrammar-light-100 px-5 dark:border-esgrammar-dark-400 dark:bg-esgrammar-dark-300'>
 			<nav className='flex h-full w-full max-w-7xl items-center justify-between'>
 				<Brand />
-				<div className='flex gap-1 translate-x-3'>
-					<IconButton>
-						<PiSun />
-					</IconButton>
+				<div className='flex translate-x-3 gap-1'>
+					<ThemeSwitcher />
 					<LinkIconButton href='https://github.com/rekdev/EsGrammar-Website'>
 						<PiGithubLogo />
 					</LinkIconButton>

@@ -3,8 +3,7 @@ import { useState } from 'react'
 import AnalysisArea from '@/components/AnalysisArea'
 import AnalysisTable from '@/components/AnalysisTable'
 import Navbar from '@/components/Navbar'
-
-import useTextAnalysed from './hooks/useTextAnalysed'
+import useTextAnalysed from '@/hooks/useTextAnalysed'
 
 function App() {
 	const [text, setText] = useState('')
