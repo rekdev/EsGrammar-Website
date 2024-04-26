@@ -6,9 +6,7 @@ function useTheme() {
 	const getSystemPreference = () =>
 		window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
 
-	const toggleTheme = () => {
-		setTheme(theme === 'dark' ? 'light' : 'dark')
-	}
+	const toggleTheme = () => setTheme(theme === 'dark' ? 'light' : 'dark')
 
 	useEffect(() => {
 		setTheme(localStorage.getItem('theme'))
