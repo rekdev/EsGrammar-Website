@@ -9,7 +9,7 @@ function ThemeSwitcher() {
 	return (
 		<>
 			<IconButton onClick={toggleTheme}>
-				{theme === 'dark' ? <PiMoonStars /> : <PiSun />}
+				{theme === 'dark' ? <PiSun /> : <PiMoonStars />}
 			</IconButton>
 		</>
 	)

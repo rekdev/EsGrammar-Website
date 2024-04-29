@@ -3,25 +3,30 @@ import { useEffect, useState } from 'react'
 function useTheme() {
 	const [theme, setTheme] = useState(null)
 
-	const getSystemPreference = () =>
-		window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
+	const DARK_MODE = 'dark'
+	const LIGHT_MODE = 'light'
 
-	const toggleTheme = () => setTheme(theme === 'dark' ? 'light' : 'dark')
+	const getSystemPreference = () =>
+		window.matchMedia('(prefers-color-scheme: dark)').matches ? DARK_MODE : LIGHT_MODE
+
+	const toggleTheme = () => setTheme(theme === DARK_MODE ? LIGHT_MODE : DARK_MODE)
 
 	useEffect(() => {
-		setTheme(localStorage.getItem('theme'))
+		const USER_PREFERENCE = localStorage.getItem('theme')
+
+		setTheme(USER_PREFERENCE)
 
 		if (
-			localStorage.getItem('theme') === null &&
-			getSystemPreference() === 'dark'
+			USER_PREFERENCE === null &&
+			getSystemPreference() === DARK_MODE
 		)
-			setTheme('dark')
+			setTheme(DARK_MODE)
 	}, [])
 
 	useEffect(() => {
-		if (theme === 'dark') {
-			document.documentElement.classList.add('dark')
-		} else document.documentElement.classList.remove('dark')
+		if (theme === DARK_MODE) {
+			document.documentElement.classList.add(DARK_MODE)
+		} else document.documentElement.classList.remove(DARK_MODE)
 
 		if (theme !== null && theme !== getSystemPreference()) {
 			localStorage.setItem('theme', theme)
