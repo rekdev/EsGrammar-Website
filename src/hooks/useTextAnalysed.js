@@ -1,10 +1,8 @@
-// @ts-check
 import { analyseText } from 'esgrammar'
 import { useEffect, useState } from 'react'
 
 /**
  * @param {string} text
- * @returns
  */
 function useTextAnalysed(text) {
 	const [wordsAnalysed, setWordsAnalysed] = useState([])
